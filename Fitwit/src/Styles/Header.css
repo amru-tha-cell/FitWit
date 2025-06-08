@@ -1,0 +1,63 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  gap: 20px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #764ba2; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Dark mode header */
+.closet-app.dark .header {
+  background: rgba(45, 55, 72, 0.95);
+  border-bottom: 1px solid rgba(74, 85, 104, 0.3);
+}
+
+.closet-app.dark .logo h1 {
+  color: #9f7aea; /* fallback */
+  background: linear-gradient(135deg, #4299e1 0%, #9f7aea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closet-app.dark .logo p {
+  color: #a0aec0;
+}

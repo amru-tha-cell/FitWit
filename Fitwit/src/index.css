@@ -1,0 +1,7 @@
+/* In your main index.css or App.css */
+@import './styles/globals.css';
+@import './styles/buttons.css';
+@import './styles/Header.css';
+@import './styles/Wardrobe.css';
+@import './styles/OutfitBuilder.css';
+@import './styles/SavedOutfits.css';

@@ -1,0 +1,50 @@
+.outfit-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.outfit-slot {
+  background: rgba(247, 250, 252, 0.8);
+  border: 2px dashed #cbd5e0;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.outfit-slot:hover {
+  border-color: #4299e1;
+  background: rgba(66, 153, 225, 0.05);
+  transform: translateY(-2px);
+}
+
+.outfit-slot.filled {
+  border-style: solid;
+  border-color: #48bb78;
+  background: white;
+  padding: 0;
+}
+
+/* Dark mode outfit slots */
+.closet-app.dark .outfit-slot {
+  background: rgba(26, 32, 44, 0.8);
+  border-color: rgba(74, 85, 104, 0.5);
+}
+
+.closet-app.dark .outfit-slot:hover {
+  border-color: #4299e1;
+  background: rgba(66, 153, 225, 0.1);
+}
+
+.closet-app.dark .outfit-slot.filled {
+  background: rgba(45, 55, 72, 0.95);
+  border-color: #48bb78;
+}
+

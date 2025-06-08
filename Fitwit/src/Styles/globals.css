@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.closet-app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode */
+.closet-app.dark {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+.closet-app.dark body {
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+/* === LAYOUT === */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+/* === CARDS === */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  color: #2d3748;
+}
+
+/* Dark mode cards */
+.closet-app.dark .card {
+  background: rgba(45, 55, 72, 0.95);
+  border: 1px solid rgba(74, 85, 104, 0.3);
+  color: #e2e8f0;
+}
+
+.closet-app.dark .card-title {
+  color: #e2e8f0;
+  border-bottom-color: rgba(74, 85, 104, 0.3);
+}
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(245, 101, 101, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(229, 62, 62, 1);
+  transform: scale(1.1);
+}
+
+.clothing-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.empty-text {
+  text-align: center;
+  color: #a0aec0;
+  font-style: italic;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(247, 250, 252, 0.8);
+  margin-bottom: 20px;
+}
+
+.upload-area:hover {
+  border-color: #4299e1;
+  background: rgba(66, 153, 225, 0.05);
+}
+
+.upload-text {
+  color: #718096;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .right-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .clothing-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+  }
+  
+  .clothing-item img {
+    height: 100px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+  
+  .clothing-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+  
+  .clothing-item img {
+    height: 80px;
+  }
+  
+  .outfit-display {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .outfit-slot {
+    min-height: 120px;
+    padding: 12px;
+  }
+}

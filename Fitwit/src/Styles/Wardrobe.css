@@ -1,0 +1,163 @@
+.search-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+}
+
+/* Dark mode inputs */
+.closet-app.dark .search-input {
+  background: rgba(45, 55, 72, 0.8);
+  border: 2px solid rgba(74, 85, 104, 0.5);
+  color: #e2e8f0;
+}
+
+.closet-app.dark .search-input:focus {
+  border-color: #4299e1;
+  background: rgba(45, 55, 72, 1);
+}
+
+/* === CLOTHING ITEMS === */
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.clothing-item {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.clothing-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #4299e1;
+}
+
+.clothing-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.clothing-item:hover img {
+  transform: scale(1.05);
+}
+
+.clothing-item-info {
+  padding: 12px;
+}
+
+.clothing-item-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.wear-count {
+  font-size: 10px;
+  color: #718096;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Dark mode clothing items */
+.closet-app.dark .clothing-item {
+  background: rgba(45, 55, 72, 0.9);
+}
+
+.closet-app.dark .clothing-item:hover {
+  border-color: #4299e1;
+}
+
+.closet-app.dark .clothing-item-name {
+  color: #e2e8f0;
+}
+
+.closet-app.dark .wear-count {
+  color: #a0aec0;
+}
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: rgba(247, 250, 252, 0.8);
+  color: #718096;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+  background: rgba(247, 250, 252, 1);
+  transform: translateY(-1px);
+}
+
+.category-tab.active {
+  color: white;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+/* Dark mode tabs */
+.closet-app.dark .category-tabs {
+  border-bottom-color: rgba(74, 85, 104, 0.3);
+}
+
+.closet-app.dark .category-tab {
+  background: rgba(45, 55, 72, 0.8);
+  color: #a0aec0;
+}
+
+.closet-app.dark .category-tab:hover {
+  background: rgba(45, 55, 72, 1);
+}
