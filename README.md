@@ -1,7 +1,7 @@
 🧠👕 FitWit: Your Smart Virtual Closet & Fitness Companion
 FitWit is an AI-powered virtual wardrobe and fitness assistant designed to help you dress smartly and stay fit effortlessly. From outfit planning to personalized wellness tips — FitWit brings both fashion and fitness into one seamless experience.
 
-🔥 Features
+Features
 👗 Virtual Closet
 Upload and organize your outfits by category (tops, bottoms, shoes, accessories).
 
