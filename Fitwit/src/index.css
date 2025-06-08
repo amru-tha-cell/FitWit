@@ -1,7 +1,7 @@
 /* In your main index.css or App.css */
-@import './styles/globals.css';
-@import './styles/buttons.css';
-@import './styles/Header.css';
-@import './styles/Wardrobe.css';
-@import './styles/OutfitBuilder.css';
-@import './styles/SavedOutfits.css';
+@import './Styles/globals.css';
+@import './Styles/buttons.css';
+@import './Styles/Header.css';
+@import './Styles/Wardrobe.css';
+@import './Styles/OutfitBuilder.css';
+@import './Styles/SavedOutfits.css';
