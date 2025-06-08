@@ -31,8 +31,6 @@
   background: white;
   padding: 0;
 }
-
-/* Dark mode outfit slots */
 .closet-app.dark .outfit-slot {
   background: rgba(26, 32, 44, 0.8);
   border-color: rgba(74, 85, 104, 0.5);

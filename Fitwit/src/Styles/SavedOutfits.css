@@ -45,8 +45,6 @@
   height: 80px;
   object-fit: cover;
 }
-
-/* Dark mode saved outfits */
 .closet-app.dark .saved-outfit-card {
   background: rgba(45, 55, 72, 0.95);
   border-color: transparent;

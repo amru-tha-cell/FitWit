@@ -43,15 +43,13 @@
   gap: 12px;
   flex-wrap: wrap;
 }
-
-/* Dark mode header */
 .closet-app.dark .header {
   background: rgba(45, 55, 72, 0.95);
   border-bottom: 1px solid rgba(74, 85, 104, 0.3);
 }
 
 .closet-app.dark .logo h1 {
-  color: #9f7aea; /* fallback */
+  color: #9f7aea; 
   background: linear-gradient(135deg, #4299e1 0%, #9f7aea 100%);
   background-clip: text;
   -webkit-background-clip: text;

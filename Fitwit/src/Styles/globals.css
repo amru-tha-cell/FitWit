@@ -17,7 +17,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Dark mode */
 .closet-app.dark {
   background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
 }
@@ -27,7 +26,6 @@ body {
   background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
 }
 
-/* === LAYOUT === */
 .main-content {
   display: grid;
   grid-template-columns: 1fr 350px;
@@ -48,8 +46,6 @@ body {
   top: 20px;
   height: fit-content;
 }
-
-/* === CARDS === */
 .card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
@@ -76,8 +72,6 @@ body {
   border-bottom: 2px solid #e2e8f0;
   color: #2d3748;
 }
-
-/* Dark mode cards */
 .closet-app.dark .card {
   background: rgba(45, 55, 72, 0.95);
   border: 1px solid rgba(74, 85, 104, 0.3);
@@ -146,8 +140,6 @@ body {
   font-size: 14px;
   text-align: center;
 }
-
-/* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .main-content {
     grid-template-columns: 1fr;

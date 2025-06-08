@@ -28,7 +28,6 @@
   color: #a0aec0;
 }
 
-/* Dark mode inputs */
 .closet-app.dark .search-input {
   background: rgba(45, 55, 72, 0.8);
   border: 2px solid rgba(74, 85, 104, 0.5);
@@ -40,7 +39,6 @@
   background: rgba(45, 55, 72, 1);
 }
 
-/* === CLOTHING ITEMS === */
 .clothing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -96,7 +94,6 @@
   gap: 4px;
 }
 
-/* Dark mode clothing items */
 .closet-app.dark .clothing-item {
   background: rgba(45, 55, 72, 0.9);
 }
@@ -148,7 +145,6 @@
   box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
 }
 
-/* Dark mode tabs */
 .closet-app.dark .category-tabs {
   border-bottom-color: rgba(74, 85, 104, 0.3);
 }

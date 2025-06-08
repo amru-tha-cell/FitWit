@@ -13,8 +13,6 @@ const Wardrobe = ({
   deleteClothingItem 
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
-
-  // Get recent items (last 10 used items)
   const getRecentItems = () => {
     const allItems = Object.values(wardrobe).flat();
     return allItems
@@ -22,8 +20,6 @@ const Wardrobe = ({
       .sort((a, b) => b.wearCount - a.wearCount)
       .slice(0, 10);
   };
-
-  // Filter items based on search
   const getFilteredItems = () => {
     if (activeCategory === 'recent') {
       return getRecentItems().filter(item =>
@@ -34,8 +30,6 @@ const Wardrobe = ({
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
   };
-
-  // Updated categories with recent tab
   const allCategories = [
     { key: 'recent', label: 'Recent', icon: Clock, color: 'btn-orange' },
     ...categories
@@ -47,8 +41,6 @@ const Wardrobe = ({
         <ShoppingBag className="icon-pink" />
         Your Wardrobe
       </h2>
-      
-      {/* NEW: Search Box */}
       <div className="search-box">
         <Search size={16} className="search-icon" />
         <input
@@ -59,8 +51,6 @@ const Wardrobe = ({
           className="search-input"
         />
       </div>
-      
-      {/* Updated Category Tabs */}
       <div className="category-tabs">
         {allCategories.map(category => {
           const Icon = category.icon;
@@ -80,8 +70,6 @@ const Wardrobe = ({
           );
         })}
       </div>
-
-      {/* Upload Button (hide for recent tab) */}
       {activeCategory !== 'recent' && (
         <label className="upload-area">
           <input
@@ -95,8 +83,6 @@ const Wardrobe = ({
           </p>
         </label>
       )}
-
-      {/* Clothing Items Grid */}
       <div className="clothing-grid">
         {getFilteredItems().map(item => (
           <div key={item.id} className="clothing-item">
@@ -107,7 +93,6 @@ const Wardrobe = ({
             />
             <div className="clothing-item-info">
               <p className="clothing-item-name">{item.name}</p>
-              {/* NEW: Show wear count */}
               {item.wearCount > 0 && (
                 <p className="wear-count">Worn {item.wearCount} times</p>
               )}
