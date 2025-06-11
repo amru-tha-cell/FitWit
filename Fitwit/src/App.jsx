@@ -20,7 +20,6 @@ import {
 } from './utils/functions';
 
 function App() {
-  // State management
   const [wardrobe, setWardrobe] = useState({
     tops: [],
     bottoms: [],
@@ -39,16 +38,12 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('tops');
   const [showSavedOutfits, setShowSavedOutfits] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-
-  // Categories configuration
   const categories = [
     { key: 'tops', label: 'Tops', icon: Shirt, color: 'btn-pink' },
     { key: 'bottoms', label: 'Bottoms', icon: ShoppingBag, color: 'btn-blue' },
     { key: 'shoes', label: 'Shoes', icon: ShoppingBag, color: 'btn-green' },
     { key: 'accessories', label: 'Accessories', icon: Sparkles, color: 'btn-purple' }
   ];
-
-  // Load data from localStorage on component mount
   useEffect(() => {
     try {
       const defaultWardrobe = { tops: [], bottoms: [], shoes: [], accessories: [] };
@@ -59,8 +54,6 @@ function App() {
       
       setWardrobe(savedWardrobe);
       setSavedOutfits(savedOutfitsList);
-      
-      // Log storage info for debugging
       const storageInfo = getStorageInfo();
       console.log('Storage usage:', storageInfo);
       
@@ -69,13 +62,10 @@ function App() {
       }
     } catch (error) {
       console.error('Error loading data:', error);
-      // Initialize with empty data if loading fails
       setWardrobe({ tops: [], bottoms: [], shoes: [], accessories: [] });
       setSavedOutfits([]);
     }
   }, []);
-
-  // Handler functions with enhanced error handling
   const handleUpload = async (category, event) => {
     try {
       await handleImageUpload(category, event, setWardrobe);
@@ -90,7 +80,6 @@ function App() {
       addToOutfit(item, setCurrentOutfit, setWardrobe);
     } catch (error) {
       console.error('Error adding to outfit:', error);
-      // Fallback: just add to outfit without tracking
       setCurrentOutfit(prev => ({
         ...prev,
         [item.category]: item
@@ -129,7 +118,6 @@ function App() {
       loadOutfit(outfit, setCurrentOutfit, setShowSavedOutfits, setSavedOutfits);
     } catch (error) {
       console.error('Error loading outfit:', error);
-      // Fallback: just load the outfit without tracking
       setCurrentOutfit(outfit.items);
       setShowSavedOutfits(false);
     }

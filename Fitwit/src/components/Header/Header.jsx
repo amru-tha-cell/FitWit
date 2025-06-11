@@ -11,7 +11,7 @@ const Header = ({ showSavedOutfits, setShowSavedOutfits, shuffleOutfit, saveOutf
         </div>
         
         <div className="header-buttons">
-          {/* NEW: Dark Mode Toggle */}
+          {}
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="btn btn-gray"

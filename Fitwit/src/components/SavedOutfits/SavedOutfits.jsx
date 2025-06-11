@@ -36,13 +36,9 @@ const SavedOutfits = ({ savedOutfits, loadOutfit, deleteOutfit, copyOutfit }) =>
                   </button>
                 </div>
               </div>
-
-              {/* Notes section */}
               {outfit.notes && (
                 <p className="outfit-notes">"{outfit.notes}"</p>
               )}
-
-              {/* Outfit preview items */}
               <div className="saved-outfit-preview">
                 {outfit.items && Object.entries(outfit.items).map(([category, item]) => 
                   item && (
